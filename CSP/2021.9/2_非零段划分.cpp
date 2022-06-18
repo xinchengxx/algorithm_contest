@@ -20,15 +20,12 @@ int main() {
         if (a[i] && !a[i - 1])
             ans++;
     }  // 统计非零段的个数
-    // 它这个思路巧妙之处在于哪里呢???相当于枚举
     set<int>::iterator it = se.begin();
     if (*it == 0)
         it++;
-    // 学习一下set迭代器的写法;
     int ret = ans;
     while (it != se.end()) {
         int num = *it;
-        // 然后修改为0,可以逐次修改是最关键的;
         for (int i = 0; i < s[num].size(); i++) {
             int id = s[num][i];
             a[id] = 0;
