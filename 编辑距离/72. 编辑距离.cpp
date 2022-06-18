@@ -4,10 +4,6 @@ using namespace std;
 
 class Solution {
    public:
-    //可以一并学习
-    //那个最长公共子串的,完全类似
-    //好好思考一下dp的核心思想
-
     int minDistance(string word1, string word2) {
         int m = word1.size();
         int n = word2.size();

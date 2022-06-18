@@ -1,4 +1,3 @@
-// 好题, 其实选子集其实也可以看成是一个背包, 满足存在性的问题
 #include <iostream>
 #include <vector>
 using namespace std;

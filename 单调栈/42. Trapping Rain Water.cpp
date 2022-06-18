@@ -12,7 +12,6 @@ class Solution {
         int ans = 0;
         for (int i = 0; i < n; i++) {
             while (!stk.empty() && height[stk.top()] < height[i]) {
-                //考虑清除这个<号而不是小于等于号其实都是一样的,不过建议弄成小于号好理解
                 int top = stk.top();
                 stk.pop();
                 if (stk.empty())

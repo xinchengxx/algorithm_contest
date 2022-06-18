@@ -1,47 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-//先测试一下类
 
-// class Animal
-// {
-// private:
-//     string name;
-
-// public:
-//     Animal(string name)
-//     {
-//         this->name = name;
-//     }
-//     void Bark()
-//     {
-//         cout << "Animal Bark" << endl;
-//     }
-// };
-// class Cat : public Animal
-// {
-// public:
-//     Cat(string name) : Animal(name){}; //采用这种方法写构造函数
-//     // void Bark()
-//     // {
-//     //     cout << "Cat Bark" << endl;
-//     // }
-//     void test()
-//     {
-//         this->Bark();
-//         this->Animal::Bark();
-//         //这也就是说在这个derived
-//         class中,继承的函数名字仍然叫Animal::function()
-//         //但是可以通过重写函数来来实现,有点类似于函数重载的样子
-//         //故而要不留歧义的使用基类的方法,请加上Base_class::function()
-//         }
-// };
-// int main()
-// {
-//     Cat mycat("tom");
-//     mycat.test();
-//     return 0;
-// }
 /*
  * Below is the interface for Iterator, which is already defined for you.
  * **DO NOT** modify the interface for Iterator.

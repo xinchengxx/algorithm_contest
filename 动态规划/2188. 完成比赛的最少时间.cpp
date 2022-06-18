@@ -26,10 +26,5 @@ class Solution {
             }
         }
         return f[numLaps];
-        // 好家伙, 它这个是如何想到的呢
-        // fi * ri ^ (x - 1) < fi + changeTime
-        // 2 ^ (x - 1) < changeTime
-        // x <= 17;
-        //
-    }
+        }
 };

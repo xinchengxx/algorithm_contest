@@ -1,8 +1,8 @@
 
 // 维护一部分和是xxx的可以用前缀和和哈希表
+#include <bits/stdc++.h>
 #include <iostream>
 #include <unordered_map>
-
 using namespace std;
 
 class Solution {

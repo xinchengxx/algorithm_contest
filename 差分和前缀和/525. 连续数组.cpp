@@ -7,7 +7,6 @@ class Solution {
    public:
     int findMaxLength(vector<int>& nums) {
         int n = nums.size();
-        // 好一个连续数组,,,, 这个题目的想法我只能说很生草！
         int cur = 0;
         int ans = 0;
 

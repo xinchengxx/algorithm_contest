@@ -1,5 +1,4 @@
-// 也是一个好题, 关键在于思想的思考和如何求最小联通子图的问题,
-// 有点像求最小生成树
+
 #include <iostream>
 #include <vector>
 using namespace std;

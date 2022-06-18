@@ -14,9 +14,6 @@ class Solution {
     vector<bool> friendRequests(int n,
                                 vector<vector<int>>& restrictions,
                                 vector<vector<int>>& requests) {
-        // 可以考虑维护一个哈希表表示不能做朋友的人,
-        // 等价于不能再同一个并查集里
-        // 需要弄清楚维护那些信息,维护朋友圈的信息,维护仇人的信息
         for (int i = 0; i < n; i++)
             fa[i] = i;
         vector<unordered_set<int>> rs(n);

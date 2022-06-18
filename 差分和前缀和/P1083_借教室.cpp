@@ -1,3 +1,4 @@
+#include <bits/stdc++.h>
 #include <iostream>
 using namespace std;
 #define MAX 1000006
