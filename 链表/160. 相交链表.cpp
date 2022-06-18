@@ -12,8 +12,6 @@ struct ListNode {
 
 class Solution {
    public:
-    //类似于LCA最近公共祖先的方法
-    //下面还有一种hash_set的做法
     ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
         int n, m;
         n = getLength(headA);
@@ -42,7 +40,6 @@ class Solution {
     }
     ListNode* getIntersectionNode_2(ListNode* headA, ListNode* headB) {
         unordered_set<ListNode*> s;
-        //我很奇怪啊,这个明明是自定义数据类型,咋还能用hash_set呢;
         while (headA->next) {
             s.emplace(headA);
             headA = headA->next;

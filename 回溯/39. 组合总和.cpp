@@ -19,8 +19,6 @@ class Solution {
             ans.push_back(numbers);
             return;
         }
-        // 要思考清除为什么会有重复的情况
-        // 可以手动添加一个搜索顺序,同层的搜索是按一定顺序来的
         for (int i = start; i < cand.size(); i++) {
             if (target >= cand[i]) {
                 numbers.push_back(cand[i]);

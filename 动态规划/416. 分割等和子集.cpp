@@ -4,7 +4,6 @@ using namespace std;
 class Solution {
    public:
     bool canPartition(vector<int>& nums) {
-        //好好思考一下, 分割等和自己, 判断sum / 2;
         int sum = 0;
         for (int i = 0; i < nums.size(); i++)
             sum += nums[i];

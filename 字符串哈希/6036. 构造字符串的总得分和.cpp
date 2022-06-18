@@ -3,10 +3,8 @@
 using namespace std;
 class Solution {
    public:
-    // 关于hash的方法..
     const int mod = 1e9 + 7;
     int p = 173;
-    // 一个mod p 的方法
     long long sumScores(string s) {
         int n = s.size();
         vector<long long> f(n + 1), h(n + 1);
@@ -18,12 +16,10 @@ class Solution {
         }
         for (int i = n - 1; i >= 0; i--) {
             int l = 1, r = n - i;
-            int cur = 0;  // 最大长度...
+            int cur = 0;
             while (l <= r) {
                 int mid = (l + r) >> 1;
-                long long val =
-                    (h[i + mid] + mod - h[i] * f[mid] % mod) %
-                    mod;  // 注意本题关于mod运算的操作, 以及关于含义...
+                long long val = (h[i + mid] + mod - h[i] * f[mid] % mod) % mod;
                 if (val == h[mid]) {
                     cur = mid;
                     l = mid + 1;

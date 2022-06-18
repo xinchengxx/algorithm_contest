@@ -14,12 +14,12 @@ void build(int l, int r, int p) {
     int mid = (l + r) >> 1;
     build(l, mid, 2 * p);
     build(mid + 1, r, 2 * p + 1);
-    sum[p] = sum[2 * p] & sum[2 * p + 1];  //因为或是具有结合律的
+    sum[p] = sum[2 * p] & sum[2 * p + 1];
 }
 int query(int ql, int qr, int l, int r, int p) {
     if (ql <= l && qr >= r)
         return sum[p];
-    int ans = 0xfffffff;  //注意按位与的ans 初始化问题
+    int ans = 0xfffffff;
     int mid = (l + r) >> 1;
     if (ql <= mid)
         ans = ans & query(ql, qr, l, mid, 2 * p);
@@ -39,19 +39,14 @@ class Solution {
         SegTree::build(1, n, 1);
         int l = 1, r = 1;
         int ans = INT_MAX;
-        // 首先滑动窗口有一个这样的套路
-        // 那就是满足窗口移动的单调性
-        // 比如说此题需要求的是最靠近的
-        // 可以明显通过窗口移动来进行判断
-        // 直到窗口移动结束
-        // 这个滑动窗口的经典判断条件
+
         while (r <= n) {
             int t = SegTree::query(l, r, 1, n, 1);
             if (t < target)
-                r = max(++l, r);  //左边界右移
+                r = max(++l, r);
             else
-                r++;                          //右边界右移
-            ans = min(ans, abs(t - target));  //更新结果
+                r++;
+            ans = min(ans, abs(t - target));
         }
         return ans;
     }

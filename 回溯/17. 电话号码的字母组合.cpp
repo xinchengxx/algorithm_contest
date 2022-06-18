@@ -27,9 +27,6 @@ class Solution {
             return;
         }
         char nu = digits[index];
-        //注意看这个at
-        //还有string的push_back()和pop_back()
-        // phoneMap.at获取的这个字符串此处的引用(reference)
         for (const char& c : phoneMap.at(nu)) {
             strs.push_back(c);
             backtrack(ans, phoneMap, digits, index + 1, strs);

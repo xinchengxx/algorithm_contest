@@ -9,8 +9,7 @@ class Solution {
                           int dst,
                           int k) {
         const int INF = 101 * 10000 + 1;
-        vector<vector<int>> f(n + 1,
-                              vector<int>(n, INF));  //可以这样初始化啊,学到了
+        vector<vector<int>> f(n + 1, vector<int>(n, INF));
         f[0][src] = 0;
         for (int i = 1; i <= k + 1; i++) {
             for (auto&& e : flights) {
@@ -20,7 +19,6 @@ class Solution {
         }
         int ans = INF;
         for (int i = 0; i <= k + 1; i++) {
-            //算了暂时不练这个
             ans = min(ans, f[i][dst]);
         }
         return ans == INF ? -1 : ans;

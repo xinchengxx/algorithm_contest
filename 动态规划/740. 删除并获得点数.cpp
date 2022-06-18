@@ -8,9 +8,8 @@ using namespace std;
 class Solution {
    public:
     int deleteAndEarn(vector<int>& nums) {
-        // 注意观察有没有状态关系
         sort(nums.begin(), nums.end());
-        unordered_map<int, int> ma;  // 记录出现的次数;
+        unordered_map<int, int> ma;
         vector<int> nums2;
         nums2.push_back(nums[0]);
         ma[nums[0]]++;

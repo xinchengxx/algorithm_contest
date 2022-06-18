@@ -1,11 +1,9 @@
-// 好一个trick
+
 #include <iostream>
 using namespace std;
 class Solution {
    public:
-    // 好一个trick
     int divide(int dividend, int divisor) {
-        // 一大堆trick题目
         if (dividend == 0)
             return 0;
         if (divisor == 1)

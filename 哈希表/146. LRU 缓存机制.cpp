@@ -3,7 +3,6 @@
 using namespace std;
 
 struct DLinkedNode {
-    //弄清楚cpp没有双向链表
     DLinkedNode* prev;
     DLinkedNode* next;
     int key, val;
@@ -71,7 +70,7 @@ class LRUCache {
    private:
     DLinkedNode* head;
     DLinkedNode* tail;  //使用表头节点和表尾节点,相当于哨兵
-    unordered_map<int, DLinkedNode*> hash_map;  //注意key必须是基本类型哦
+    unordered_map<int, DLinkedNode*> hash_map;
     int size;
     int capcity;
 };

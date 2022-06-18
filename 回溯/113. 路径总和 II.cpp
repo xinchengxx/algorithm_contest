@@ -13,7 +13,6 @@ struct TreeNode {
 
 class Solution {
    public:
-    //每次递归都有两种手段,一是左子树，二是右子树，递归到叶子节点为止
     vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
         if (root == nullptr)
             return vector<vector<int>>();
@@ -27,9 +26,6 @@ class Solution {
                    vector<vector<int>>& ans,
                    vector<int>& nums) {
         if (root->left == nullptr && root->right == nullptr) {
-            //叶子节点
-            //当前这个是没加入的
-            //必须要到叶子节点
             if (tar == root->val) {
                 nums.push_back(root->val);
                 ans.push_back(nums);
@@ -37,8 +33,6 @@ class Solution {
             }
             return;
         }
-        // 草还有负数的吗
-        // 注意这个负数的情况要小心了
         nums.push_back(root->val);
         if (root->left)
             trackBack(root->left, tar - root->val, ans, nums);

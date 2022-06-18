@@ -1,4 +1,3 @@
-// 这个题可以称得上是一个非常经典的题目了
 #include <algorithm>
 #include <iostream>
 #include <stack>

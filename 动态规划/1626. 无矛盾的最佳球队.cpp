@@ -7,11 +7,9 @@
 #include <vector>
 using namespace std;
 
-// 同质的题目 ===>
 class Solution {
    public:
     int bestTeamScore(vector<int>& scores, vector<int>& ages) {
-        // 好好思考一下
         int n = scores.size();
         vector<int> order(n);
         sort(order.begin(), order.end(), [&](int i, int j) {
@@ -27,7 +25,6 @@ class Solution {
             idx = order[i];
             f[i] += scores[i];
             for (int j = 0; j < i; j++) {
-                // 要能够选;
                 int last = order[j];
                 if (scores[last] < scores[idx]) {
                     f[i] = max(f[i], f[j] + scores[idx]);

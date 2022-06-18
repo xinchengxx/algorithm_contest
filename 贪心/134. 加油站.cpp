@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-// 关于处理环形的一种技巧以及关于一些贪心思想的使用
 class Solution {
    public:
     int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
@@ -29,6 +28,5 @@ class Solution {
         }
         return -1;
     }
-    // ok 知道怎么做了
     int a[100000 * 2 + 2], b[100000 * 2 + 2];
 };

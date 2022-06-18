@@ -5,17 +5,14 @@ int t, s;
 int a[10000 + 10], v[10000 + 10];
 long long dp[10000000 + 10];
 using namespace std;
-// 注意要计算一下数据不要被卡住
-int main()
-{
+
+int main() {
     cin >> t >> s;
-    for (int i = 1; i <= s; i++)
-    {
+    for (int i = 1; i <= s; i++) {
         cin >> a[i] >> v[i];
     }
     for (int i = 1; i <= s; i++)
-        for (int j = a[i]; j <= t; j++)
-        {
+        for (int j = a[i]; j <= t; j++) {
             dp[j] = max(dp[j], dp[j - a[i]] + v[i]);
         }
     cout << dp[t];

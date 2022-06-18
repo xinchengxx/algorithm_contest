@@ -5,20 +5,15 @@ using namespace std;
 
 class Solution {
    public:
-    //最短路的Dijkstra
     int networkDelayTime(vector<vector<int>>& times, int n, int k) {
-        //邻接表存;
-        vector<vector<pair<int, int>>> g(n + 1);
+              vector<vector<pair<int, int>>> g(n + 1);
         for (auto&& s : times)
             g[s[0]].push_back(make_pair(s[2], s[1]));
-        //,后面有空格
-        // for后面有空格
         vector<int> dist(n + 1);
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> q;
         q.push(make_pair(0, k));
         for (int i = 1; i <= n; i++)
             dist[i] = INT_MAX;
-        // while 后面也有空格
         dist[k] = 0;
         while (!q.empty()) {
             auto [t, v] = q.top();

@@ -7,11 +7,7 @@ ll a[M], dp[M * 4], mul[M * 4], add[M * 4];
 inline void push_up(int p) {
     dp[p] = (dp[2 * p] + dp[2 * p + 1]) % q;
 }
-// keep Remember of it
 void push_down(int l, int r, int p) {
-    //表示push_down
-    //保持这个假设
-    //好好思考一下
     int m = (l + r) >> 1;
     dp[2 * p + 1] =
         (dp[2 * p + 1] * mul[p] + (r - m) * add[p]) % q;  //先乘后加是人为规定的
@@ -35,7 +31,7 @@ void build(int l, int r, int p) {
     push_up(p);
 }
 
-//表示乘法
+//
 void update1(int l, int r, int s, int e, int p, int t) {
     if (l <= s && r >= e) {
         dp[p] = (dp[p] * t) % q;

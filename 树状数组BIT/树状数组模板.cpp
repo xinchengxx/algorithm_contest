@@ -1,8 +1,4 @@
-//核心思想在于树状数组每个数管辖的元素
-//例如c[6]=c[110]管辖的是c[110]开始往后的10(2)个元素
-//所以进位的元素全都需要被管辖
-//由于求lowbit在补码的机器里可以O(1)获得,所以效率比较高
-//最多是n个
+
 #include <cstdio>
 int tree[100000 + 10], n, m;
 inline int lowbit(int x) {
@@ -14,19 +10,6 @@ void add(int x, int p) {
         x += lowbit(x);  //相当于二进制的进位
     }
 }
-
-// 关于这个BIT的add操作我有点没搞懂....
-// 为什么是从lowbit开
-
-// 1....10000
-// idx - 2 ^ r + 1 ........idx个数
-
-// 关键在于这个add, 不会漏掉吗......, ok 证明完毕... I complete understand
-
-// 还有一个search for BIT, 关键在于我必须完全搞懂BIT中tree的概念,
-// 然后就是BIT的suitable background, 然后具体的logn
-
-// 操作和初始化, 前提是需要elements is non-negative
 
 int query(int x) {
     //最后会减成0

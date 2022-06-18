@@ -8,19 +8,16 @@ int head[MAX];
 int t[MAX << 1], ne[MAX << 1];
 long long ans;
 long long f[MAX], d[MAX], siz[MAX];
-inline void add(int u, int v)
-{
+inline void add(int u, int v) {
     t[++tot] = v;
     ne[tot] = head[u];
     head[u] = tot;
 }
-void dp1(int u, int fa)
-{
+void dp1(int u, int fa) {
     //统计深度;
     siz[u] = 1;
     d[u] = d[fa] + 1;
-    for (int i = head[u]; i; i = ne[i])
-    {
+    for (int i = head[u]; i; i = ne[i]) {
         int v = t[i];
         if (v == fa)
             continue;
@@ -29,10 +26,8 @@ void dp1(int u, int fa)
         siz[u] += siz[v];
     }
 }
-void dp2(int u, int fa)
-{
-    for (int i = head[u]; i; i = ne[i])
-    {
+void dp2(int u, int fa) {
+    for (int i = head[u]; i; i = ne[i]) {
         int v = t[i];
         if (v == fa)
             continue;
@@ -40,11 +35,9 @@ void dp2(int u, int fa)
         dp2(v, u);
     }
 }
-int main()
-{
+int main() {
     scanf("%d", &n);
-    for (int i = 1; i < n; i++)
-    {
+    for (int i = 1; i < n; i++) {
         int u, v;
         scanf("%d%d", &u, &v);
         add(u, v), add(v, u);

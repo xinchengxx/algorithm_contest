@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-//让我手写一颗Trie
+
 class Trie {
    private:
     vector<Trie*> childs;
@@ -21,10 +21,7 @@ class Trie {
 
    public:
     /** Initialize your data structure here. */
-    //注意c++构造函数的初始化方式
-    //之后得去了解一下
-    //继承构造函数
-    //成员采用构造函数的赋值方法
+
     Trie() : childs(26), isEnd(false) {}
 
     /** Inserts a word into the trie. */

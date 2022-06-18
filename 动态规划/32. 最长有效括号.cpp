@@ -4,9 +4,6 @@ using namespace std;
 class Solution {
    public:
     int longestValidParentheses(string s) {
-        // 主要是dp状态的设置问题;
-        // 本题的dp设置成了以xxx结尾的Longest Substr的长度;
-        // 换种思路, 从i == 1;开始
         dp[0] = 0;
         dp[1] = 0;
         int ans = 0;
@@ -16,7 +13,6 @@ class Solution {
                 dp[j] = 0;
             else {
                 if (s[i - 1] == '(') {
-                    // 形成了一个闭着的形式;
                     dp[j] = dp[j - 2] + 2;
                 } else {
                     // "))"

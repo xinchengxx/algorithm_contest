@@ -4,8 +4,6 @@ using namespace std;
 class Solution {
    public:
     int maxSumDivThree(vector<int>& nums) {
-        //选出能被三整除的???
-        // 主要是dp的套路见的过于少了, 由于只有0 1 2 三种状态;
         int n = nums.size();
         vector<vector<int>> f(n, vector<int>(3, 0));
         f[0][1] = INT_MIN, f[0][2] = INT_MIN;
@@ -34,7 +32,7 @@ class Solution {
 
 // 状态压缩降低空间复杂度
 class Solution2 {
-public:
+   public:
     int maxSumDivThree(vector<int>& nums) {
         vector<int> dp(3);
         for (int num : nums)

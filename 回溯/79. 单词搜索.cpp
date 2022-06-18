@@ -1,7 +1,4 @@
-//注意这个单词搜索踩得坑
-//如果是在边界匹配结束的话无法递归下去
-//所以可以直接到递归边界判定
-//注意回溯的时候记得取消visit的访问
+
 #include <string>
 #include <vector>
 using namespace std;
