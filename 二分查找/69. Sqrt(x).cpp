@@ -1,17 +1,11 @@
 class Solution {
    public:
     int mySqrt(int x) {
-        int l = 0, r = x;
-        int ans = -1;
-        while (l <= r) {
-            int mid = (l + r) >> 1;
-            if ((long long)(mid * mid) <= x) {
-                ans = mid;
-                l = mid + 1;
-            } else {
-                r = mid - 1;
-            }
+        if(x <= 1) return x;
+        long long re = x;
+        while(re * re > x){
+            re = (x / re + re) >> 1;
         }
-        return ans;
+        return re;
     }
 };
