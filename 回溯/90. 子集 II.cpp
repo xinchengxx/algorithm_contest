@@ -4,7 +4,6 @@
 using namespace std;
 class Solution {
    public:
-    // 直接排序并且类似那个题一样的,选出target
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
         sort(nums.begin(), nums.end());
         for (int num : nums) {
@@ -30,7 +29,6 @@ class Solution {
             tmp.push_back(freq[start].first);
             trackBack(ans, start + 1, tmp);
         }
-        //回溯到上一层的时候必须恢复这个全局的tmp;
         for (int i = 1; i <= freq[start].second; i++) {
             tmp.pop_back();
         }

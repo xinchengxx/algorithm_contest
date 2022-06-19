@@ -30,8 +30,6 @@ class Solution {
     long long goodTriplets(vector<int>& nums1, vector<int>& nums2) {
         long long ans = 0;
         int n = nums1.size();
-        // 没错这题真是一个好题...
-        // 关键在于实现的思想.
         unordered_map<int, int> m;
         for (int i = 0; i < n; i++) {
             m[nums2[i]] = i + 1;

@@ -8,10 +8,7 @@ class Solution {
    public:
     // Longest Arithmetic Subsequence
     // dp加入状态是一种常规的操作
-    // 需要好好反思一下
     int longestSubsequence(vector<int>& arr, int difference) {
-        // 关于贪心的一些题目, 注意尝试一下先猜测
-        // 此题有一些想法;
         int f[500000][2];
         unordered_map<int, int> ma;
         f[0][0] = 0;

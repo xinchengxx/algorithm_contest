@@ -28,7 +28,6 @@ class Solution {
         }
         return val;
     }
-    // 蓄水池抽样算法, 可以好好学习一下;
     ListNode* head;
 };
 

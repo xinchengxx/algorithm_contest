@@ -3,25 +3,20 @@ using namespace std;
 using i64 = long long;
 
 void solve() {
-	int n;
-	i64 k;
-	cin >> n >> k;
+    int n;
+    i64 k;
+    cin >> n >> k;
 
-	cout << k / (1ll * n * n) << endl;
-	// n + 1 个数	
-
-	// 0... t * (n - 1) + (n + 1 - t) * n ^ n = k
+    cout << k / (1ll * n * n) << endl;
 }
 
-
-
 int main() {
-	int t;
-	cin >> t;
+    int t;
+    cin >> t;
 
-	while (t--) {
-		solve();
-	}
+    while (t--) {
+        solve();
+    }
 
-	return 0;
+    return 0;
 }

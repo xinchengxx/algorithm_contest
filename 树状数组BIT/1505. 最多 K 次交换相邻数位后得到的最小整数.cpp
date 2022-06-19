@@ -1,9 +1,8 @@
-// BIT别写错了,, 这是个好题, 关键在于BIT需要维护什么东西
+
 #include <iostream>
 #include <queue>
 #include <vector>
 using namespace std;
-// 弄清楚了哈
 
 struct BIT {
     int n;
@@ -30,12 +29,7 @@ struct BIT {
 class Solution {
    public:
     string minInteger(string num, int k) {
-        // ... 本题是一个树状数组的好题...
-        // 关键在于如何实现的........
-        // 实际上我们需要搞清楚, 它的偏移量......
-        // 然后就
         int n = num.size();
-        // 0.......n
         BIT tree(n);
         vector<queue<int>> q(10);
         for (int i = 0; i < num.size(); i++) {

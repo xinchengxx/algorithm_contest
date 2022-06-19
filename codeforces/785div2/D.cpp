@@ -2,18 +2,15 @@
 using namespace std;
 using i64 = long long;
 
-
-void solve() {
-	
-}
+void solve() {}
 
 int main() {
-	int t;
-	cin >> t;
+    int t;
+    cin >> t;
 
-	while (t--) {
-		solve();
-	}
+    while (t--) {
+        solve();
+    }
 
-	return 0;
+    return 0;
 }

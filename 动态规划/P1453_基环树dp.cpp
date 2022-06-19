@@ -9,16 +9,13 @@ int head[MAX], nxt[MAX << 1], ti[MAX << 1];
 int tot;
 ll f[MAX][2];
 int fa[MAX];
-int find(int u)
-{
-    if (fa[u] == u)
-    {
+int find(int u) {
+    if (fa[u] == u) {
         return u;
     }
     return fa[u] = find(fa[u]);
 }
-inline ll read()
-{
+inline ll read() {
     ll x = 0;
     bool f = false;
     char ch = getchar();
@@ -30,20 +27,16 @@ inline ll read()
         x = x * 10 + ch - '0', ch = getchar();
     return f ? -x : x;
 }
-inline void add(int u, int v)
-{
+inline void add(int u, int v) {
     ti[++tot] = v;
     nxt[tot] = head[u];
     head[u] = tot;
 }
-// 0 表示不选
-void dfs(int u, int fa)
-{
-    //注意每个顶点都有一个流量;
-    f[u][1] = val[u]; // 总是有很多细节
+
+void dfs(int u, int fa) {
+    f[u][1] = val[u];
     f[u][0] = 0;
-    for (int i = head[u]; i; i = nxt[i])
-    {
+    for (int i = head[u]; i; i = nxt[i]) {
         int v = ti[i];
         if (v == fa)
             continue;
@@ -52,20 +45,16 @@ void dfs(int u, int fa)
         f[u][0] += max(f[v][0], f[v][1]);
     }
 }
-int main()
-{
+int main() {
     n = read();
-    for (int i = 1; i <= n; i++)
-    {
+    for (int i = 1; i <= n; i++) {
         val[i] = read();
         fa[i] = i;
     }
     int root1, root2;
-    for (int i = 1; i <= n; i++)
-    {
+    for (int i = 1; i <= n; i++) {
         int u = read() + 1, v = read() + 1;
-        if (find(u) == find(v))
-        {
+        if (find(u) == find(v)) {
             root1 = u;
             root2 = v;
             continue;
@@ -76,7 +65,7 @@ int main()
     }
     scanf("%lf", &k);
     dfs(root1, 0);
-    ll v1 = f[root1][0]; // 不选
+    ll v1 = f[root1][0];  // 不选
     dfs(root2, 0);
     v1 = max(v1, f[root2][0]);
     printf("%.1lf", v1 * k);

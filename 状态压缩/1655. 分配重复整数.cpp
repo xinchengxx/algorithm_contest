@@ -6,9 +6,6 @@ using namespace std;
 class Solution {
    public:
     bool canDistribute(vector<int>& nums, vector<int>& quantity) {
-        // 关于本题的状态压缩dp, 好好思考;
-        // 首先需要弄清楚什么东西是状态??????????
-        // 然后其次是时间复杂度;
         unordered_map<int, int> tmp;
         for (int num : nums) {
             tmp[num]++;

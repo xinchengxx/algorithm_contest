@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 class Solution {
-public:
+   public:
     string longestCommonPrefix(vector<string> strs) {
         const int n = strs.size(), len = strs[0].size();
         if (n == 0)

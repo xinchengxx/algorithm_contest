@@ -13,12 +13,8 @@ class Solution {
             return right < rhs.right;
         }
     };
-    // 本题有一个经典的贪心套路
-    // 那就是给定一个线段,
-    // 然后求不重叠线段的个数的最大值同时保证这些线段长度之和最小
     vector<string> maxNumOfSubstrings(string s) {
         vector<Seg> seg(26, Seg{-1, -1});
-        // 预处理左右端点
         for (int i = 0; i < s.length(); ++i) {
             int char_idx = s[i] - 'a';
             if (seg[char_idx].left == -1) {

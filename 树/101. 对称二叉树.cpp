@@ -1,6 +1,3 @@
-
-//主要是思路没有理清楚
-//什么情况下树是对称的?????
 #include <iostream>
 using namespace std;
 struct TreeNode {
@@ -14,7 +11,6 @@ struct TreeNode {
 };
 class Solution {
    public:
-    //二叉树是对称的,等价于右子树与左子树对称
     bool isGood(TreeNode* l, TreeNode* r) {
         if (l == nullptr && r == nullptr)
             return true;

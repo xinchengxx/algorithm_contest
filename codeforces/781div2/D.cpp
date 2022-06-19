@@ -2,14 +2,12 @@
 using namespace std;
 
 int t;
-void solve() {
-
-}
+void solve() {}
 
 int main() {
-	cin >> t;
-	while (t--) {
-		solve();
-	}
-	return 0;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+    return 0;
 }

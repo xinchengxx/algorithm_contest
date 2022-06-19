@@ -13,19 +13,16 @@ class Solution {
    public:
     vector<int> minInterval(vector<vector<int>>& intervals,
                             vector<int>& queries) {
-        // 好题, 关键是要弄清楚是要怎么离线查询, 以及到底原因是怎么
         int n = queries.size();
         vector<int> ans(n);
         vector<Q> qry;
-        sort(intervals.begin(), intervals.end());  // 默认就是这样的
+        sort(intervals.begin(), intervals.end());
         for (int i = 0; i < n; i++)
             qry.push_back({i, queries[i], 0});
 
         priority_queue<pair<int, int>, vector<pair<int, int>>,
                        greater<pair<int, int>>>
             pq;
-        // 默认是按照len排序的...
-        // 默认是
         sort(qry.begin(), qry.end());
         int m = intervals.size(), tail = 0;
         for (int i = 0; i < n; i++) {

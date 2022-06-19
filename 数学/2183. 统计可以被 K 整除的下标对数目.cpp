@@ -19,10 +19,6 @@ class Solution {
         }
         // divisor
         unordered_map<int, int> cnt;
-        // 首先这个题需要想清楚, 对每一个nums[i]来说, 需要考虑nums[j] (j < i)
-        // 需要满足什么条件才能与* nums[i]相乘是k的倍数
-        // 然后cnt[d]实际上表示的是这个因子的倍数的个数
-        // 还需要想清楚它的含义
         for (int i = 0; i < nums.size(); i++) {
             ans += cnt[k / gcd(nums[i], k)];
             for (int v : divisor) {
